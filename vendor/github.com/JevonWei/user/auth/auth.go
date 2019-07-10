@@ -19,7 +19,7 @@ var passWord = md5.Sum([]byte("danran"))
 // 通过返回值验证是否成功
 func Auth() bool {
 	for i := 0; i < maxAuth; i++ {
-		fmt.Println("请输入本系统登录密码:")
+		fmt.Print("请输入本系统登录密码:")
 
 		// 输入密码不回显
 		if bytes, err := gopass.GetPasswd(); err == nil {
